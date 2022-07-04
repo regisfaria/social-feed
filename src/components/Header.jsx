@@ -1,5 +1,11 @@
 import styles from "./Header.module.css";
 
+import logo from "../assets/logo.svg";
+
 export function Header() {
-  return <strong className={styles.header}>Social Feed</strong>;
+  return (
+    <header className={styles.header}>
+      <img src={logo} alt="Logo" />
+    </header>
+  );
 }
