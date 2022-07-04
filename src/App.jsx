@@ -1,4 +1,5 @@
 import { Header } from "./components/Header";
+import { Post } from "./components/Post";
 
 import styles from "./App.module.css";
 import "./global.css";
@@ -12,7 +13,14 @@ function App() {
         <aside>sidebar</aside>
 
         <main>
-          <h1>content</h1>
+          <Post
+            author="Régis Faria"
+            content="Ohhh! This app is so nice \(-v-v-)/"
+          />
+          <Post
+            author="John Doe"
+            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi officiis veritatis esse non? Ducimus reiciendis facilis voluptatem nisi sequi omnis repellendus vel possimus. Earum odit eius suscipit excepturi deleniti iure!"
+          />
         </main>
       </div>
     </div>
