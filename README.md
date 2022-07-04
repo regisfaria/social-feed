@@ -13,13 +13,13 @@ First make sure you have the LTS version of node installed;
 After cloning the repository, run:
 
 ```shell
-> `npm install`
+> npm install
 ```
 
 To run the application:
 
 ```shell
-> `npm run dev`
+> npm run dev
 ```
 
 The web-app will be running at `http://localhost:3001`
