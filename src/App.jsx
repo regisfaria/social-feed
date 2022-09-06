@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import { Post } from "./components/Post";
+import { postData } from "./mocks/posts";
 
 import styles from "./App.module.css";
 import "./global.css";
@@ -15,12 +16,20 @@ function App() {
 
         <main>
           <Post
+            profileUrl="https://github.com/regisfaria.png"
             author="Régis Faria"
-            content="Ohhh! This app is so nice \(-v-v-)/"
+            role="Developer"
+            content={postData.first.content}
+            embedded={postData.first.embedded}
+            hashtags={postData.first.hashtags}
           />
           <Post
+            profileUrl="https://xesque.rocketseat.dev/users/avatar/profile-7a16c64f-e5c4-418f-8530-089d830e9ade-1628641872955.jpg"
             author="John Doe"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi officiis veritatis esse non? Ducimus reiciendis facilis voluptatem nisi sequi omnis repellendus vel possimus. Earum odit eius suscipit excepturi deleniti iure!"
+            role="Project manager"
+            content={postData.second.content}
+            embedded={postData.second.embedded}
+            hashtags={postData.second.hashtags}
           />
         </main>
       </div>
