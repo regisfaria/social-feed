@@ -116,9 +116,6 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.1s;
-
-  visibility: hidden;
-  max-height: 0;
 }
 
 .commentArea button[type="submit"]:hover {
