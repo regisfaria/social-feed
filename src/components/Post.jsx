@@ -42,13 +42,11 @@ export function Post(props) {
         )}
 
         {props.hashtags && (
-          <div>
+          <p className={styles.hashtag}>
             {props.hashtags.map((hashtag) => (
-              <p>
-                <a href="">{hashtag}</a>
-              </p>
+              <a href="">{hashtag}</a>
             ))}
-          </div>
+          </p>
         )}
       </div>
     </article>
