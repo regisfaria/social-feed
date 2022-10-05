@@ -1,4 +1,4 @@
-import styles from "./Post.module.css";
+import styles from './Post.module.css'
 
 /**
  *
@@ -60,5 +60,5 @@ export function Post(props) {
         </footer>
       </form>
     </article>
-  );
+  )
 }

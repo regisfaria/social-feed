@@ -1,10 +1,10 @@
-import { Header } from "./components/Header";
-import { Sidebar } from "./components/Sidebar";
-import { Post } from "./components/Post";
-import { postData } from "./mocks/posts";
+import { Header } from './components/Header'
+import { Sidebar } from './components/Sidebar'
+import { Post } from './components/Post'
+import { postData } from './mocks/posts'
 
-import styles from "./App.module.css";
-import "./global.css";
+import styles from './App.module.css'
+import './global.css'
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
         </main>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
