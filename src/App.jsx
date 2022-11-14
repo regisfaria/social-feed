@@ -1,10 +1,10 @@
-import { Header } from './components/Header'
-import { Sidebar } from './components/Sidebar'
-import { Post } from './components/Post'
-import { postData } from './mocks/posts'
+import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
+import { Post } from "./components/Post";
+import { posts } from "./mocks/posts";
 
-import styles from './App.module.css'
-import './global.css'
+import styles from "./App.module.css";
+import "./global.css";
 
 function App() {
   return (
@@ -15,26 +15,22 @@ function App() {
         <Sidebar />
 
         <main>
-          <Post
-            profileUrl="https://github.com/regisfaria.png"
-            author="Régis Faria"
-            role="Developer"
-            content={postData.first.content}
-            embedded={postData.first.embedded}
-            hashtags={postData.first.hashtags}
-          />
-          <Post
-            profileUrl="https://xesque.rocketseat.dev/users/avatar/profile-7a16c64f-e5c4-418f-8530-089d830e9ade-1628641872955.jpg"
-            author="John Doe"
-            role="Project manager"
-            content={postData.second.content}
-            embedded={postData.second.embedded}
-            hashtags={postData.second.hashtags}
-          />
+          {posts.map((post) => {
+            return (
+              <Post
+                profileUrl={post.author.profileUrl}
+                author={post.author.name}
+                role={post.author.role}
+                content={post.content}
+                embedded={post.embedded}
+                hashtags={post.hashtags}
+              />
+            );
+          })}
         </main>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
