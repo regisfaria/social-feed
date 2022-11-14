@@ -1,3 +1,6 @@
+import { format, formatDistanceToNow } from "date-fns";
+import enUS from "date-fns/locale/en-US";
+
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
 import styles from "./Post.module.css";
@@ -13,9 +16,21 @@ import styles from "./Post.module.css";
  * @param props.embedded.uri string(should be an url such as "https://<smth.here>.com")
  * @param props.embedded.text string
  * @param props.hashtags string[]
+ * @param props.publishedAt Date
  * @returns Post component
  */
 export function Post(props) {
+  const publishedDateFormatted = format(
+    props.publishedAt,
+    "d 'of' LLLL 'at' HH:mm",
+    { locale: enUS }
+  );
+
+  const publishedDateRelativeToNow = formatDistanceToNow(props.publishedAt, {
+    locale: enUS,
+    addSuffix: true,
+  });
+
   return (
     <article className={styles.post}>
       <header>
@@ -27,8 +42,11 @@ export function Post(props) {
           </div>
         </div>
 
-        <time title="6 of November at 14:35" dateTime="2022-09-06 14:35:00">
-          Published in 1h
+        <time
+          title={publishedDateFormatted}
+          dateTime={props.publishedAt.toISOString()}
+        >
+          {publishedDateRelativeToNow}
         </time>
       </header>
 
