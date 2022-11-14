@@ -17,6 +17,7 @@ export const posts = [
       text: "My GitHub Profile",
     },
     hashtags: ["#project", "#devsUnited", "#socialNetwork", "#gitHub"],
+    publishedAt: new Date("2022-01-01"),
   },
   {
     id: 2,
@@ -36,5 +37,6 @@ export const posts = [
       text: "Google Search Engine",
     },
     hashtags: ["#lorem", "#ipsum", "#randomTxt"],
+    publishedAt: new Date("2022-08-01"),
   },
 ];

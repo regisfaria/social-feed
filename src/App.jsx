@@ -24,6 +24,7 @@ function App() {
                 content={post.content}
                 embedded={post.embedded}
                 hashtags={post.hashtags}
+                publishedAt={post.publishedAt}
               />
             );
           })}
